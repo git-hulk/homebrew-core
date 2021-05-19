@@ -17,7 +17,7 @@ class Kvrocks < Formula
     system "git", "submodule", "update"
     mkdir "build" do
       system "cmake", "-DCMAKE_BUILD_TYPE=Release", "..", *std_cmake_args
-      system "make", "-j4", "kvrocks"
+      system "make", "kvrocks"
       bin.install "kvrocks"
       etc.install "../kvrocks.conf"
     end
